@@ -1,0 +1,40 @@
+#menu i {
+	color: #fff;
+}
+
+#menu a {
+	color: #fff;
+}
+
+#menu .row .rol {
+	height: 20px;
+	padding-top: 25px;
+	text-align: center;
+	font-size: 20px;
+	text-shadow: 2px 2px #ff0000;
+	padding-bottom: 3px;
+
+}
+
+#menu .perfil {
+height: 150px;
+background-color: green;
+background-image: url(../img/fondo.jpg);
+color: #fff;
+}
+
+#menu .img_perfil {
+	width: 130px;
+	height: 130px;
+	float: right;
+	padding-top: 15px;
+	margin: 0;
+}
+
+#menu .collapsible-body { 
+background-color: #844268 !important;	
+padding: 0; }
+
+#slide-out {
+background-color: #87255e;	
+}
