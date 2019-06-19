@@ -20,37 +20,34 @@ session_destroy();
 <body>
 <!-- Logo / Div superior -->
 <div id="marca">
-	<img id="logo" src="img/logo.png">
+	
 </div>
 
 <!-- Login / Div inferior -->
 <div id="down">
 	<div id="login">
-		<form method="POST" action="enviar_datos.php" autocomplete="off">	
-		<label>Usuario: </label>	
-		<input type="text" name="usuario" placeholder="Usuario" required>
-		<label>Contraseña</label>
-		<input type="text" name="pass" placeholder="Contraseña" required>
-
-		<button class="btn waves-effect waves-light" type="submit" name="action">Entrar
-    <i class="material-icons right">send</i></button>
-		<a href="recuperarclave.html">Recuperar contraseña</a>
+		<form class="row input-field" method="POST" action="enviar_datos.php" autocomplete="nope">
+			<div class="col s12"><img id="logo-txt" src="img/logo.png"></div>
+				<div class="col s2"><i class="material-icons small">person</i></div>
+				<div class="input-field col s9">
+          			<input id="usuario" name="usuario" type="text" class="validate" required autocomplete="nope">
+          			<label for="usuario">Usuario</label>
+        		</div>
+				<div class="col s2"><i class="material-icons small">enhanced_encryption</i></div>
+				<div class="input-field col s9">
+          			<input id="password" name="password" type="password" class="validate" required>
+          			<label for="password">Contraseña</label>
+        		</div>
+			<button class="btn" type="submit" value="submit">Entrar</button>
+		
+		<div class="recuperar"><a href="#">Recuperar contraseña</a></div>
 		
 
 		<!-- Chequea si hay errores de ingreso para mostrar en la pantalla -->
 		<div class="errores"> 
 		<?php 
 			$est = $_GET['est'];
-			switch ($est) {
-				case '1':
-					print('El ususario no existe.');
-					break;
-				case '2':
-					print('El ususario se encuentra inactivo.');
-				default:
-					# code...
-					break;
-			}
+			include_once('errores.php');
 		?>
 		</div>
 		</form>
