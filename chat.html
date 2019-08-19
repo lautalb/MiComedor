@@ -52,19 +52,19 @@
   <a class="waves-effect waves-light modal-trigger" href="#modal1"><img class="img" src="img/chat.png"></a>
 
   <!-- Modal Structure -->
+  <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content" >
-    	<div id="titulo-modal">
-    		<div id="barra"><h6>¿En qué podemos ayudarte? <br></h6></div>
-      		<div><p id="bienvenida">Hola! Nos encantaría poder ayudarte. ¿Sobre qué querés más info? Donar, voluntario, ayudar, dirección, otros.</p></div>
-		</div>
-    	<div class="cuerpo">
-			<div><p id="chatLog"></p><div style="visibility: hidden;" id="escribiendo"><img class="escribiendo" src="img/p.png"></div>  
-       		<input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
-       		</div>
+    	<div class="barra"><h6>¿En qué podemos ayudarte? <br></h6></div>
+      	<div><p id="bienvenida">Hola! Nos encantaría poder ayudarte. ¿Sobre qué querés más info? Donar, voluntario, ayudar, dirección, otros.</p></div>
+
+		<div class="row"><p id="chatLog"></p></div>
+     	<img style="visibility: hidden;" id="escribiendo" class="escribiendo" src="img/p.png">  
+     	<input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+       	</div>
     	</div>
   	</div>
-  </div>
+  
 
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
@@ -121,7 +121,7 @@
                     
                 }}, delayInMilliseconds);  
             } 
-            
+
 	$(document).ready(function(){
 		$('.modal').modal();
   	}); 
