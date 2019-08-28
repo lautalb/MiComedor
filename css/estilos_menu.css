@@ -19,7 +19,8 @@
 #menu .perfil {
 height: 150px;
 background-color: green;
-background-image: url(../img/fondo.jpg);
+background-image: url(../img/fondo_ppal.jpg);
+background-size: 350px 250px;
 color: #fff;
 }
 
@@ -29,6 +30,7 @@ color: #fff;
 	float: right;
 	padding-top: 15px;
 	margin: 0;
+	border-radius: 50%;
 }
 
 #menu .collapsible-body { 

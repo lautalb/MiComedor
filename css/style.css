@@ -65,12 +65,6 @@ body {
 	padding-top: 55px;
 }
 
-#footer {
-	margin-right: auto;
-	margin-left: auto;
-	width: 400px;
-}
-
 #mapa {
 	padding-top: 5px;
 	width: 960px;
@@ -117,14 +111,16 @@ font-size: 25px;
 }
 
 #content {
-  padding: 20px;
+  padding: 15px;
 }
 
 footer {
 	position: fixed;
-	bottom: 15px;
+	bottom: 4px;
+	height: 45px;
 	color: #000;
 	padding-left: 455px;
+	width: 78%;
 }
 
 form h3 {
@@ -153,6 +149,9 @@ select {
 .tabla_stock {
 	background-color: #fc9fb4;
 }
+.libro_diario {
+	background-color: #ff547a;	
+}
 .cabecera_stock {
 	background-color: #ff547a;
 	height: 35px;
@@ -166,3 +165,25 @@ select {
 width: 100px;
 height: 100px;
 }
+.personal {
+	border: 1px solid #aaa;
+	background-color: white;
+	border-radius: 15px;
+}
+
+
+.cuadro-buscar {
+	border: 1px solid #000;
+	background-color: rgba(255, 150, 174, 0.4);
+	border-radius: 15px;
+}
+
+.enviar {
+	margin-bottom: 15px;
+}
+
+
+
+
+
+

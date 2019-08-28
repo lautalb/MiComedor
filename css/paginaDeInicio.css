@@ -1,0 +1,161 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* NOTICIAS */
+.noticias{
+    padding-bottom: 30px;
+}
+.noticias h2{
+ text-align: center;
+}
+
+.card{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+}
+
+.card p {
+    text-align: center !important;
+}
+
+.card a {
+    text-align: center !important;
+
+}
+
+.card img {
+    border-radius: 3% !important;
+}
+
+/* CARD TWITTER*/
+.twitter {
+    border-radius: 30px;
+    border: 2px solid rgba(5, 5, 5, 0.514);
+    background:#00abee9d !important;
+}
+/* SECCION ACERCA DE */
+
+body .acercaDe {
+    text-align: center;
+    background-image: url("../img/fondo_ppal.jpg");
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+body .acercaDe .parrafo {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 30px;
+    padding: 20px;
+}
+
+body .acercaDe p {
+    font-size: 20px;
+    font-style: inherit;
+    color: rgb(0, 0, 0);
+}
+
+
+/*     SLIDER CSS */
+
+
+.slider .indicators .indicator-item {
+
+    background-color: #666666;
+    border: 3px solid #ffffff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #ffffff;
+}
+
+.slider {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.slider .indicators {
+    bottom: 60px;
+    z-index: 100;
+    /* text-align: left; */
+}
+
+
+/* HEADER  */
+
+header .navbar {
+    background-color: #A14DA0;
+    padding-bottom: 30px;
+}
+
+header .navbar a {
+    color: black;
+    
+}
+
+/*   Modal chat  */
+.modal {
+    width: 400px;
+    height: 350px;
+    margin-top: 20%;
+   margin-left: 73%;
+   border-radius: 15px;
+}
+
+
+.chat {
+    background-color: #98edaf;
+    border-radius: 5px;
+}
+.usuario {
+    background-color: #f5cef4;
+    border-radius: 5px;
+}
+
+.robot {
+    padding-right: 1px;
+}
+.escribiendo {
+    width: 20px;
+    height: 20px;
+}
+
+/* DONACIONES */
+.donaciones{
+    text-align: center;
+    padding-bottom: 35px;
+}
+.donaciones h2{
+    text-align: center;
+
+}
+
+.donaciones .boton {
+    padding-top: 20px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #A14DA0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.568);
+}
+
+.footer h5 {
+    color: black;
+}
+
+.footer-copyright {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.568);
+}
