@@ -12,23 +12,25 @@ $salida = "<table>
 			<tr><td>Fecha</td><td>Tweet</td></tr></thead></tbody>";  
 
 foreach($tweets as $tweet){
-	$feachaDeCreacin = $tweet->created_at;
-	$texto = $tweet ->text;
-	
-	//echo $tweet->created_at ."</br>". $tweet->created_at ."------------------------- </br>";
-	//print_r($tweet);
-	if(!empty($tweet->entites->urls)){
-		foreach ($tweet ->entities ->urls as $url1) {
-			$remplazo = '<a href="'.$url1->url.'">'.$url1->url.'</a>';
-			$texto = str_replace (  $url1->url ,  $remplazo ,  $tweet->text );
-			$salida.="<tr><td>".$tweet->created_at."</td><td>".$texto."</td></tr> \n";
-		
+	$texto = $tweet->text;
+	if (!empty($tweet->entities->urls)) {		
+		foreach($tweet->entities->urls as $url1){ 
+			$reemplazar = $url1->url;
+			$reemplazo = "<a href='". $reemplazar ."''>".$reemplazar."</a>";
+			$texto = str_replace ( $reemplazar , $reemplazo , $texto );
+			}
 		}
-	}
-	$salida.="<tr><td>".$tweet->created_at."</td><td>".$texto."</td></tr> \n";
-	
+	if (!empty($tweet->entities->media)){
+		foreach($tweet->entities->media as $url2){ 
+			$reemplazar = $url2->url;
+			$reemplazo = "<a href='".$url2->media_url_https."' target='_blank'><img class='right' src='". $url2->media_url_https ."' width='50px' height='50px'>";
+			$texto = str_replace ( $reemplazar , $reemplazo , $texto );
+			}
+		}
+	$salida.="<tr><td>".$tweet->created_at."</td><td>".$texto."</td></tr> \n";	
 	}
 	$salida.="</tbody></table>"; 
+
 print($salida);
 
 ?>
