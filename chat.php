@@ -1,8 +1,16 @@
 <?php 
-session_start();
+
+if (session_status() === PHP_SESSION_NONE){
+  session_start();
+}
+
+if (isset($_SESSION['bot'])) {
 include_once('bot/chat.php'); 
 $bot1 = $_SESSION['bot'];
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -10,48 +18,44 @@ $bot1 = $_SESSION['bot'];
 	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos_bot.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
 <style type="text/css">
-	/* p { 
-	border: 1px solid #000; }*/
-	.img { 
-	/*	margin-top: 40%;
-		margin-left: 1400px;*/
-		width: 100px;
-		height: 100px;
-	 }
-	.modal {
-	 	width: 400px;
-	 	height: 350px;
-	 	margin-top: 20%;
-		margin-left: 73%;
-		border-radius: 15px;
-	 }
-	
-
-	 .chat {
-	 	background-color: #98edaf;
-	 	border-radius: 5px;
-	 }
-	 .usuario {
-	 	background-color: #f5cef4;
-	 	border-radius: 5px;
-	 }
-
-	 .robot {
-	 	padding-right: 1px;
-	 }
-	 .escribiendo {
-	 	width: 20px;
-	 	height: 20px;
-	 }
-
+  .img { 
+  /*  margin-top: 40%;
+    margin-left: 1400px;*/
+    width: 100px;
+    height: 100px;
+   }
+  .modal {
+    width: 400px;
+    height: 350px;
+    margin-top: 20%;
+    margin-left: 73%;
+    border-radius: 15px;
+   }
+  
+   .chat {
+    background-color: #98edaf;
+    border-radius: 5px;
+   }
+   .usuario {
+    background-color: #f5cef4;
+    border-radius: 5px;
+   }
+   .robot {
+    padding-right: 1px;
+   }
+   .escribiendo {
+    width: 20px;
+    height: 20px;
+   }
 </style>
+
 </head>
 <body>
 
@@ -87,7 +91,6 @@ $bot1 = $_SESSION['bot'];
 	function bajar() {
 		document.getElementById('modal1').scrollTop = 250000;
 		document.getElementById('chatLog').scrollTop = 25000;
-
 	}    
           function talk() {
                 var user = document.getElementById("userBox").value;
@@ -97,13 +100,8 @@ $bot1 = $_SESSION['bot'];
 				bajar();
 var a = '';
            var jArray =( <?php echo json_encode($bot1, JSON_UNESCAPED_UNICODE); ?>);
-           var respuesta =( <?php echo json_encode($respuesta, JSON_UNESCAPED_UNICODE); ?>);
           
-
-
-
                 var delayInMilliseconds = 2000; //1 second
-
 				setTimeout(function() {
                 if (user in jArray) {
                   //a = jArray[user]
@@ -117,7 +115,6 @@ var a = '';
                     
                 }}, delayInMilliseconds);  
             } 
-
 	$(document).ready(function(){
 		$('.modal').modal();
   	}); 
