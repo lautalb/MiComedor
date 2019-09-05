@@ -1,26 +1,17 @@
 <?php 
 include_once('conexion.php');
+if (session_status() === PHP_SESSION_NONE){
+	session_start();
+}
 
-$sql = mysqli_query($conn, "SELECT * FROM bot");
-$_SESSION['bot'] = array();
-$x = 0;
+if (!isset($_SESSION['bot'])) {
+	$sql = mysqli_query($conn, "SELECT pregunta, respuesta FROM bot");
+	$_SESSION['bot'] = array();
+	while ($row = $sql->fetch_assoc()) {
+		$bot[$row['pregunta']] = $row['respuesta'];
+		}
+	$_SESSION['bot'] = $bot;
 
-while ($row = $sql->fetch_assoc()) {
-	$bot[$row['pregunta']] = $row['respuesta'];
-//	$pregunta[$row['pregunta']] = $x;
-//	$respuesta[$x] = $row['respuesta'];
-	$x++;
-	}
-
-//$_SESSION['pregunta'] = $pregunta;
-//$_SESSION['respuesta'] = $respuesta;
-$_SESSION['bot'] = $bot;
-//print_r($_SESSION['pregunta']);
-//print_r($_SESSION['respuesta']);
-//$_SESSION['bot'] = $bot;
-
-
-
-// print_r($_SESSION['bot']);
+}
 
  ?>
